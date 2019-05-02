@@ -12,8 +12,10 @@ public class CategoriaService {
 	@Autowired
 	private CategoriaRepository categoriaRepository;
 	
-	public Categoria buscar(Integer id) {
-		Categoria obj = categoriaRepository.findOne(id);
+	private Categoria buscar(Integer id) {
+		Categoria obj = categoriaRepository.saveAll(id);
 		return obj;
 	}
+	
+	
 }
